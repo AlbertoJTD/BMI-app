@@ -1,38 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BMIApp.MainPage">
+             x:Class="BMIApp.MainPage"
+             Visual="Material">
 
     <StackLayout VerticalOptions="Center"
                  HorizontalOptions="Center"
-                 Margin="20,10">
+                 WidthRequest="250">
 
         <Label Text="Calculate your BMI"
                FontSize="50"
                HorizontalTextAlignment="Center"
                TextColor="#62757B"
-               FontAttributes="Bold"/>
+               FontAttributes="Bold"
+               Margin="0,0,0,10"/>
 
-        <Label Grid.Row="0"
-                   Text="Height"/>
-        <Entry Grid.Row="1"
-                Placeholder="Type your height.."
-                x:Name="Height"
-                Keyboard="Numeric"/>
+        <Entry Placeholder="Height (m)"
+               x:Name="Height"
+               Keyboard="Numeric"/>
 
-        <Label Grid.Row="0"
-                Text="Weight"/>
-        <Entry Grid.Row="1"
-                Placeholder="Type your weight.."
-                x:Name="Weight"
-                Keyboard="Numeric"/>
+        <Entry Placeholder="Weight (Kg)"
+               x:Name="Weight"
+               Keyboard="Numeric"
+               Margin="0,0,0,10"/>
 
         <Entry Placeholder="Your BMI"
-                x:Name="BMI"
-               IsEnabled="False"/>
+               x:Name="BMI"
+               IsEnabled="False"
+               Margin="0,0,0,10"/>
 
         <Button Text="Calculate"
-                Clicked="Button_Clicked"/>
+                Clicked="Button_Clicked"
+                BackgroundColor="Purple"
+                CornerRadius="10"/>
     </StackLayout>
 
 </ContentPage>
