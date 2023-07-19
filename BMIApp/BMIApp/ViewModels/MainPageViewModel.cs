@@ -43,6 +43,11 @@ namespace BMIApp.ViewModels
 
 			CalculateBMI = new Command(() =>
 			{
+				if(User.Height == 0 || User.Weight == 0)
+				{
+					Application.Current.MainPage.DisplayAlert("Error", "Please, fill in the form", "Ok");
+					return;
+				}
 				Result = User.Weight / (User.Height * User.Height);
 				Application.Current.MainPage.DisplayAlert("BMI Result", this.GetBMIMessage(Result), "Ok");
 			});
