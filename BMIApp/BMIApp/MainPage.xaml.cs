@@ -17,6 +17,12 @@ namespace BMIApp
 
 		private void Button_Clicked(object sender, EventArgs e)
 		{
+			if (string.IsNullOrEmpty(Height.Text) || string.IsNullOrEmpty(Weight.Text))
+			{
+				DisplayAlert("Error", "Please, fill in the form", "Ok");
+				return;
+			}
+
 			var height = double.Parse(Height.Text);
 			var weight = double.Parse(Weight.Text);
 
