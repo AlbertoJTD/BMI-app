@@ -28,7 +28,8 @@
                 Keyboard="Numeric"/>
 
         <Entry Placeholder="Your BMI"
-                x:Name="BMI"/>
+                x:Name="BMI"
+               IsEnabled="False"/>
 
         <Button Text="Calculate"
                 Clicked="Button_Clicked"/>
