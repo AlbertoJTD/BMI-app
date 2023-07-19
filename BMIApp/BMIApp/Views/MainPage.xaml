@@ -16,21 +16,21 @@
                Margin="0,0,0,10"/>
 
         <Entry Placeholder="Height (m)"
-               x:Name="Height"
-               Keyboard="Numeric"/>
+               Keyboard="Numeric"
+               Text="{Binding User.Height}"/>
 
         <Entry Placeholder="Weight (Kg)"
-               x:Name="Weight"
                Keyboard="Numeric"
-               Margin="0,0,0,10"/>
+               Margin="0,0,0,10"
+               Text="{Binding User.Weight}"/>
 
         <Entry Placeholder="Your BMI"
-               x:Name="BMI"
                IsEnabled="False"
-               Margin="0,0,0,10"/>
+               Margin="0,0,0,10"
+               Text="{Binding Result}"/>
 
         <Button Text="Calculate"
-                Clicked="Button_Clicked"
+                Command="{Binding CalculateBMI}"
                 BackgroundColor="Purple"
                 CornerRadius="10"/>
     </StackLayout>
