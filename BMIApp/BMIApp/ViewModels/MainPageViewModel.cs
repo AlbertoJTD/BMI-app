@@ -44,7 +44,33 @@ namespace BMIApp.ViewModels
 			CalculateBMI = new Command(() =>
 			{
 				Result = User.Weight / (User.Height * User.Height);
+				Application.Current.MainPage.DisplayAlert("BMI Result", this.GetBMIMessage(Result), "Ok");
 			});
+		}
+
+		private string GetBMIMessage(double BMIResult)
+		{
+			string message = "";
+			switch (BMIResult)
+			{
+				case double result when result < 18.5:
+					message = "Your weight is low";
+					break;
+
+				case double result when result <= 24.9:
+					message = "You weight is normal";
+					break;
+
+				case double result when result <= 29.9:
+					message = "You have overweight";
+					break;
+
+				default:
+					message = "You are obese";
+					break;
+			}
+
+			return message;
 		}
 	}
 }
