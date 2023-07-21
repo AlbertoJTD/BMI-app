@@ -4,8 +4,8 @@
 This app will help you to calculate your Body Mass Index _(BMI)_ ❤️‍🩹
 
 ## How it works
-- Enter your height
-- Enter your weight
+- Enter your height in meters
+- Enter your weight in kilograms
 - Finally, click on the calculate button
 
 <p align="center">
